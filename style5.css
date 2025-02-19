@@ -310,3 +310,43 @@ footer p {
 .btn-more:hover {
   background-color: #45a049;
 }
+
+/* 🟢 반응형 스타일 추가 (모바일에서 이미지 위, 텍스트 아래로 정렬) */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column; /* 모바일에서는 세로 정렬 */
+      align-items: center;
+      text-align: center;
+  }
+
+  .text-container {
+      max-width: 100%; /* 텍스트가 전체 너비 사용 */
+      text-align: center;
+  }
+
+  .image-container {
+      max-width: 90%; /* 모바일에서 이미지 크기 최적화 */
+  }
+
+  .image-container img {
+      width: 100%; /* 이미지가 컨테이너를 꽉 채우도록 */
+  }
+
+  /* 네비게이션 메뉴 간격 조정 */
+  nav ul {
+      flex-direction: column; /* 모바일에서는 세로 정렬 */
+      align-items: center;
+      gap: 10px;
+  }
+
+  nav ul li {
+      width: 100%;
+      text-align: center;
+  }
+
+  nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 12px;
+  }
+}
